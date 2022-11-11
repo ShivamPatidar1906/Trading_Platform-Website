@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            text-align: center;
+            border: 3px solid black;
+            margin: 100px;
+            height: 350px;
+            width: 400px;
+            margin-left:450px ;
+            background-color: aliceblue;
+        }
+        #innerdiv{
+            margin-top: 30px;
+        }
+        #logo{
+            width: 120px;
+        }
+        body{
+            background-image: url('image.jpg');
+            border: 1px solid blanchedalmond;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <img id="logo" src="Logo.png">
+        <div id="innerdiv">
+        <h3>Login to FinHub</h3>
+        Username : <input type="text" placeholder="Enter your username...." id="uname"><br><br>
+        Password : <input type="password" placeholder="Enter your password" id="pass"><br><br>
+        <input type="submit" onclick="validatest()">
+
+        </div>
+    </div>
+
+
+</body>
+<script>
+    
+    
+    function validatest(){
+            let user = document.getElementById('uname').value;
+        
+        let passw = document.getElementById('pass').value;
+        if(user=='admin' && passw=='shivam')
+        {
+            
+            window.location='profile.html'
+            
+        }
+        else if(user=='' || passw=='')
+        {
+            alert('Enter username and password')
+        }
+        else{
+            alert('Invalid username or password')
+        }
+    }
+</script>
+</html>
